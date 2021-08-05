@@ -1,0 +1,15 @@
+application:
+  name: "demo"
+  environment:  "prod"
+
+http:
+  mode: "debug"
+  port: "80"
+  host: "0.0.0.0"
+
+database:
+  "default":
+    dns:  ""
+    maxIdleConns: 5
+    maxOpenConns: 100
+    mode: "debug"
