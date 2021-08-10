@@ -35,7 +35,9 @@ service Helloworld {
 	}
 }
 
-message CreateHelloworldRequest {}
+message CreateHelloworldRequest {
+	string name = 1;
+}
 message CreateHelloworldReply {}
 
 message UpdateHelloworldRequest {}
