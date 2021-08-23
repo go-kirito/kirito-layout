@@ -1,0 +1,12 @@
+application:
+  environment: "prod"
+
+log:
+  level: "info"
+
+database:
+  "default":
+    dns:  ""
+    maxIdleConns: 5
+    maxOpenConns: 100
+    mode: "debug"
