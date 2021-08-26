@@ -8,5 +8,5 @@ package ecode
 import "github.com/go-kirito/pkg/errors"
 
 var (
-	ErrInvalidArgument = errors.BadRequest("100001", "参数错误")
+	ErrNotFound = errors.NotFound("100001", "用户不存在")
 )

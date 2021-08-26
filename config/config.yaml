@@ -1,12 +1,13 @@
 application:
-  environment: "prod"
+  environment: "dev"
 
 log:
   level: "info"
 
-database:
-  "default":
-    dns:  ""
-    maxIdleConns: 5
-    maxOpenConns: 100
-    mode: "debug"
+#database:
+#  "default":
+#    dns:  ""
+#    maxIdleConns: 5
+#    maxOpenConns: 100
+#    mode: "debug"
+

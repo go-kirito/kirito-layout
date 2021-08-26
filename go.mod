@@ -3,12 +3,13 @@ module app
 go 1.16
 
 require (
-	github.com/go-kirito/pkg v0.0.0-20210821015905-09eb79c72bfb
+	github.com/go-kirito/pkg v0.0.0-20210824104209-367179c968ee
 	github.com/google/wire v0.5.0
-	github.com/natefinch/lumberjack v2.0.0+incompatible // indirect
 	go.uber.org/zap v1.19.0 // indirect
-	google.golang.org/genproto v0.0.0-20210820002220-43fce44e7af1
+	golang.org/x/net v0.0.0-20210825183410-e898025ed96a // indirect
+	golang.org/x/sys v0.0.0-20210823070655-63515b42dcdf // indirect
+	golang.org/x/text v0.3.7 // indirect
+	google.golang.org/genproto v0.0.0-20210825212027-de86158e7fda
 	google.golang.org/grpc v1.40.0
 	google.golang.org/protobuf v1.27.1
-	gopkg.in/natefinch/lumberjack.v2 v2.0.0 // indirect
 )

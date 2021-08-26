@@ -6,11 +6,14 @@ import (
 
 	"app/di"
 
+	"github.com/go-kirito/pkg/util/response"
+
+	"github.com/go-kirito/pkg/zdb"
+
 	"github.com/go-kirito/pkg/application"
 	"github.com/go-kirito/pkg/middleware/recovery"
 	"github.com/go-kirito/pkg/transport/grpc"
 	"github.com/go-kirito/pkg/transport/http"
-	"github.com/go-kirito/pkg/util/response"
 	"github.com/go-kirito/pkg/zconfig"
 	"github.com/go-kirito/pkg/zlog"
 )
@@ -31,7 +34,11 @@ func main() {
 		log.Fatal("读取配置文件失败:", config)
 	}
 
+	//初始化log配置
 	zlog.Init()
+
+	//初始化数据库配置
+	zdb.InitMySQL()
 
 	grpcAddress := zconfig.GetString("server.grpc.port")
 
@@ -67,9 +74,7 @@ func main() {
 		application.HttpServer(httpSrv),
 	)
 
-	if err := di.RegisterService(app); err != nil {
-		log.Fatal(err)
-	}
+	di.RegisterService(app)
 
 	if err := app.Run(); err != nil {
 		log.Fatal(err)
