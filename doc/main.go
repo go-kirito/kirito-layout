@@ -10,7 +10,7 @@ import (
 	"log"
 	"os"
 
-	_ "app/ecode"
+	_ "kirito-layout/ecode"
 
 	"github.com/go-kirito/pkg/errors"
 )
