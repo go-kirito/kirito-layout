@@ -1,11 +1,11 @@
 # Kirito 模板
 
 
-## Install Kirito
+## 安装kirito
 ```
 go get -u github.com/go-kirito/cmd/kirito
 ```
-## Create a service
+## 创建服务
 ```
 # 创建项目模板
 kirito new server
@@ -21,4 +21,9 @@ make run
 ## Docker
 ```bash
 make docker
+```
+
+## 生成文档
+```bash
+make doc
 ```
