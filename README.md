@@ -13,7 +13,7 @@ kirito new server
 cd server
 
 # 创建helloworld模块
-make helloworld
+make demo
 
 # 运行服务
 make run

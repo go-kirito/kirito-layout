@@ -27,7 +27,7 @@ doc:
 	@go run doc/main.go
 
 # 运行程序
-run:
+run:wire
 	@go mod tidy
 	@go run cmd/main.go -f config/config.yaml
 
@@ -42,13 +42,13 @@ docker:
 	docker run --rm -p 8000:8000 -p 9000:9000 app
 
 # 生成demo
-helloworld:
+demo:
 	@echo "生成hellworld的protobuf文件..."
 	kirito proto add api/helloworld/v1/helloworld.proto
 	kirito proto client api/helloworld/v1/helloworld.proto
 	@mkdir -p internal/app/helloword/usecase/
 	kirito proto server api/helloworld/v1/helloworld.proto -t internal/app/helloword/usecase/
-	kirito wire .
+	make run
 
 # show help
 help:
