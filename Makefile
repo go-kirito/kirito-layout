@@ -43,12 +43,11 @@ docker:
 
 # 生成demo
 demo:
-	@echo "生成hellworld的protobuf文件..."
-	kirito proto add api/helloworld/v1/helloworld.proto
-	kirito proto client api/helloworld/v1/helloworld.proto
+	@kirito proto add api/helloworld/v1/helloworld.proto
+	@kirito proto client api/helloworld/v1/helloworld.proto
 	@mkdir -p internal/app/helloworld/usecase/
-	kirito proto server api/helloworld/v1/helloworld.proto -t internal/app/helloworld/usecase/
-	make run
+	@kirito proto server api/helloworld/v1/helloworld.proto -t internal/app/helloworld/usecase/
+	@make run
 
 # show help
 help:
