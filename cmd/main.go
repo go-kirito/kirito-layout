@@ -4,7 +4,7 @@ import (
 	"flag"
 	"log"
 
-	"app/di"
+	"kirito-layout/di"
 
 	"github.com/go-kirito/pkg/util/response"
 
