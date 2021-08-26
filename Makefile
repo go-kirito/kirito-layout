@@ -19,6 +19,7 @@ proto:
 
 # 生成依赖注入文件
 wire:
+	@go mod tidy
 	@kirito wire .
 	@wire ./...
 
@@ -28,7 +29,6 @@ doc:
 
 # 运行程序
 run:wire
-	@go mod tidy
 	@go run cmd/main.go -f config/config.yaml
 
 # 编译程序
