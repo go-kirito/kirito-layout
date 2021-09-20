@@ -28,8 +28,10 @@ doc:
 	@go run doc/main.go
 
 # 运行程序
-run:wire
-	@go run cmd/main.go -f config/config.yaml
+run:
+	@go run cmd/main.go -f config/config.yaml\
+
+all:wire
 
 # 编译程序
 build:
