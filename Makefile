@@ -31,7 +31,7 @@ doc:
 run:
 	@go run cmd/main.go -f config/config.yaml\
 
-all:wire
+all:wire run
 
 # 编译程序
 build:
