@@ -5,7 +5,7 @@ VERSION=$(shell git describe --tags --always)
 
 # 检查kirito脚手架
 dependency:
-	@which wire &>/dev/null || go get github.com/google/wire
+	@which wire &>/dev/null || go get github.com/google/wire/cmd/wire
 	@which kirito &>/dev/null || (go get github.com/go-kirito/cmd/kirito && kirito upgrade)
 
 generate: dependency proto wire fmt
