@@ -21,6 +21,7 @@ proto:
 wire:
 	@go mod tidy
 	@kirito wire .
+	@go get github.com/google/wire
 	@wire ./...
 
 # 生成doc文档
