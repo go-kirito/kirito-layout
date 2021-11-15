@@ -48,8 +48,8 @@ docker:
 demo:
 	@kirito proto add api/helloworld/v1/helloworld.proto
 	@kirito proto client api/helloworld/v1/helloworld.proto
-	@mkdir -p internal/app/helloworld/usecase/
-	@kirito proto server api/helloworld/v1/helloworld.proto -t internal/app/helloworld/usecase/
+	@mkdir -p internal/helloworld/usecase/
+	@kirito proto server api/helloworld/v1/helloworld.proto -t internal/helloworld/usecase/
 	@make run
 
 # show help
