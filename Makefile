@@ -50,7 +50,7 @@ demo:
 	@kirito proto client api/helloworld/v1/helloworld.proto
 	@mkdir -p internal/helloworld/usecase/
 	@kirito proto server api/helloworld/v1/helloworld.proto -t internal/helloworld/usecase/
-	@make run
+	@make all
 
 # show help
 help:
